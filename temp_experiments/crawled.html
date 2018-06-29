@@ -1,0 +1,250 @@
+ssh://shipeng@39.106.179.25:22/data/share/.anaconda3/bin/python -u /data/shannon/shipeng/pycharm/knowledge_base_qa/knowledge_base_qa/spider/share_market/sz_market_overall.py
+[2018-06-08 12:55:06,213] [__init__.py:39] [INFO]: 本次运行日志文件路径:/data/shannon/shipeng/pycharm/knowledge_base_qa/log/2018-06-08_12:55:06.log
+now sz:: 2018-02-02
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<title>深圳证券交易所</title>
+</head>
+<body>
+<div class="main">
+      <!--header-->
+   <head>
+<link href="/main/template/284/images/global.css" rel="stylesheet" type="text/css" />
+<link href="/szseWeb/common/css/table_main.css" rel="stylesheet" type="text/css"/>
+<style>
+body{ font-size: 12px;}
+</style>
+</head>
+
+
+<div class="header">
+	<div class="minNav">
+		<a class="en" href="/main/en/">English</a>
+		<a href="/main/mainboard">深市主板</a>
+		<a href="http://sme.szse.cn">中小企业板</a>
+	   <a href="http://chinext.szse.cn">创业板</a>
+      <a href="http://lefu.szse.cn">乐富基金</a>
+		<a href="/main/ints/">综合协议交易平台|固定收益信息平台</a>
+		<a href="http://www.homeforsmes.com.cn/">中小企业之家</a>
+	</div>
+	<div class="nav" id="navRootId" >
+		<!--Nav超级链接不能进行格式化排版，会造成Navigator有空隙-->
+		<a href="/" id="www.szse.cn">首页</a><a href="/main/disclosure/" id="disclosure">信息披露</a><a href="/main/marketdata/" id="marketdata">市场数据</a><a href="/main/rule/" id="rule">法律/规则</a><a href="http://investor.szse.cn/" id="investor">投资者教育</a><a href="/main/research/" id="research" >研究/刊物</a><a href="/main/aboutus/" id="aboutus" >关于本所</a>
+	</div>
+</div>
+<script type="text/javascript" src="/common/script/default.js"></script>
+<script type="text/javascript">
+/*
+	function mouseOver(id){
+		var arrays = ['www.szse.cn','disclosure','marketdata','rule','investor','research','aboutus'];
+		for(var i=0;i<arrays.length;i++){
+			if(id==arrays[i]){
+				document.getElementById(id).className="ind";
+			}
+		}
+	}
+
+	function mouseOut(id){
+		var linkUrl = GetPageName(window.location.href);
+		if(linkUrl.indexOf(id)>-1 && id != "www.szse.cn"){
+			document.getElementById(id).className="ind";
+		}else{
+			document.getElementById(id).className="";
+		}
+	}
+*/
+</script>
+<SCRIPT SRC='/szseWeb/common/script/jquery-1.11.3.min.js'></SCRIPT>
+  <!--header #end-->
+
+  <div class="content m_height">
+    <script type="text/javascript" src="/szseWeb/common/script/typeahead.js"></script>
+<div class="leftlist inside">
+      <div class="all_lbt">市场数据</div>
+      <div class="l_nav" style="clear:both;">
+        <!--第一层 begin-->
+        <div class="x_menu">
+          <!--第一层大标题 begin-->
+          <ul class="type01">
+              <li class="f12"  style="cursor:pointer" onclick="expandFirstItem('root01')">
+					<b class="tab_fl">交易品种</b>
+                    <img id="image_root01" rootid="marketdata" src="/main/template/31/images/jia1.gif" height="12" width="12">
+              </li>
+          </ul>
+          <div id="root01" class="menu_box" style="display: none;" parentid="image_root01">
+            <!--第一小层 begin-->
+            <div class="nr">
+              <!--法律层 begin-->
+              <ul class="two_menu">
+                 <li><a href="/main/marketdata/jypz/colist/" parentid="root01" id="marketdatajypzcolist">股票</a></li>
+                 <li><a href="/main/marketdata/jypz/fundlist1/" parentid="root01" id="marketdatajypzfundlist1">基金</a></li>
+                 <li><a href="/main/marketdata/jypz/zqlb/" parentid="root01" id="marketdatajypzzqlb">债券</a></li>
+                 <li><a href="/main/marketdata/jypz/kzz/" parentid="root01" id="marketdatajypzkzz">可转换债券</a></li>
+                 <li><a href="/main/marketdata/jypz/qzlb/" parentid="root01" id="marketdatajypzqzlb">权证</a></li>
+                 <li><a href="/main/marketdata/jypz/etflb/" parentid="root01"id="marketdatajypzetflb">ETF</a></li>
+                 <li><a href="/main/marketdata/jypz/yxg/" parentid="root01"id="marketdatajypzyxg">优先股</a></li>
+                 <li><a href="/main/marketdata/jypz/ztzzssgs/" parentid="root01" id="marketdatajypzztzzssgs">暂停/终止上市公司</a></li>
+                  <li><a href="/main/marketdata/jypz/ssgsgmxx/" parentid="root01" id="marketdatajypzssgsgmxx">上市公司更名信息</a></li>
+              </ul>
+              <!--法律层end -->
+            </div>
+          </div>
+        </div>
+        <div class="x_menu">
+          <!--第一层大标题 begin-->
+          <ul class="type01">
+             <li class="f12" style="cursor:pointer" onclick="expandFirstItem('root02')">
+				<b class="tab_fl">行情与指数</b>
+				<img id="image_root02" rootid="marketdata" src="/main/template/31/images/jia1.gif" height="12" width="12">
+			</li>
+          </ul>
+          <div id="root02" class="menu_box" style="display:none;" parentid="image_root02">
+            <!--第一小层 begin-->
+            <div class="nr">
+              <!--法律层 begin-->
+              <ul class="two_menu">
+                  <!--<li><a href="/main/marketdata/hqcx/hqlb/" parentid="root02" id="marketdatahqcxhqlb">证券行情</a></li>-->
+                  <li><a href="/main/marketdata/hqcx/hqlb/" id="marketdatahqcxhqlb" parentid="root02"  name="otherurls" urls="main/marketdata/hqcx/hqlb/;main/marketdata/hqcx/zqhq_history/">证券行情</a></li>
+                  <!--<li><a href="/main/marketdata/hqcx/xshqlb/" parentid="root02" id="marketdatahqcxxshqlb">指数行情</a></li>-->
+                  <li><a href="/main/marketdata/hqcx/xshqlb/" id="marketdatahqcxxshqlb" parentid="root02" name="otherurls" urls="main/marketdata/hqcx/xshqlb/;main/marketdata/hqcx/zshq_history/">指数行情</a></li>
+                  <li><a href="/main/marketdata/hqcx/zsybg/" parentid="root02" id="marketdatahqcxzsybg">指数与样本股</a></li>
+                  <li><a href="http://www.cnindex.com.cn/" target="_blank">巨潮指数系列</a></li>
+                  <li><a href="http://www.csindex.com.cn/" target="_blank">中证指数系列</a></li>
+                   <li><a href="https://www.cesc.com/sc/index.html" target="_blank">中华指数系列</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="x_menu">
+          <!--第一层大标题 begin-->
+          <ul class="type01">
+              <li class="f12" style="cursor:pointer" onclick="expandFirstItem('root03')">
+				<b class="tab_fl">交易统计</b>
+				<img id="image_root03" rootid="marketdata" src="/main/template/31/images/jia1.gif" height="12" width="12">
+			</li>
+          </ul>
+          <!--第一层大标题 end-->
+          <!--第一层包含的内容 begin-->
+          <div id="root03" class="menu_box" style="display:none;" parentid="image_root03">
+            <div class="nr">
+              <ul class="two_menu">
+                  <li><a href="/main/marketdata/tjsj/jbzb/" parentid="root03" id="marketdatatjsjjbzb">基本指标</a></li>
+                  <li><a href="/main/marketdata/tjsj/jyjg/" parentid="root03" id="marketdatatjsjjyjg">成交概况</a></li>
+                  <li><a href="/main/marketdata/tjsj/hyzq/" parentid="root03" id="marketdatatjsjhyzq">活跃证券</a></li>
+                  <li><a href="/main/marketdata/tjsj/jypm/" parentid="root03" id="marketdatatjsjjypm">交易排序</a></li>
+                  <li><a href="/main/marketdata/tjsj/hysyl/" parentid="root03" id="marketdatatjsjhysyl">行业市盈率</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="x_menu">
+          <!--第一层大标题 begin-->
+          <ul class="type01">
+               <li class="f12" style="cursor:pointer">
+				<b><a href="/main/marketdata/zttj_front/" rootid="marketdata" id="mainmarketdatazttj_front">专题统计</a></b>
+			</li>
+          </ul>
+        </div>
+        <div class="x_menu">
+          <!--第一层大标题 begin-->
+          <ul class="type01" style="height:32px; overflow:hidden;">
+              <li class="f12" style="cursor:pointer" onclick="expandFirstItem('root04')">
+				<b class="tab_fl">电子出版物</b>
+				<img id="image_root04" rootid="marketdata" src="/main/template/31/images/jia1.gif" height="12" width="12">
+			</li>
+          </ul>
+          <div id="root04" class="menu_box" style="display:none;" parentid="image_root04">
+            <div class="nr">
+              <ul class="two_menu">
+                 <li><a href="/main/marketdata/tjyb_front/" parentid="root04" id="mainmarketdatatjyb_front">统计月报</a></li>
+                 <li><a href="/main/marketdata/wbw/marketstat/" parentid="root04" id="marketdatawbwmarketstat">统计年鉴</a></li>
+              </ul>
+              <!--法律层end -->
+            </div>
+            <!--第一小层 end-->
+
+          </div>
+          <!--第一层包含的内容 end-->
+        </div>
+      </div>
+      <p><img src="/main/template/31/images/blue_bk.gif" /></p>
+      <p class="left_img">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" align="right"><tr>
+<td >
+<DIV class=side_link><A href="/main/marketdata/tjsj/jbzb/"><IMG src="/main/images/2011/10/31/20111031160036392.gif" border=0></A><BR><A href="/main/marketdata/hqcx/zsybg/"><IMG src="/main/images/2011/10/31/20111031160111465.gif" border=0></A></DIV>
+</td>
+</tr></table>
+        </p>
+      <p>　</p>
+    </div>
+    <div class="index" style="_clear:both; display:inline; _margin-left:14px;">
+	  <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0">
+  <tr>
+    <td></td>
+  </tr>
+
+    <tr>
+    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+      <tr>
+        <td>
+		    <LINK rel="stylesheet" type="text/css" href="/szseWeb/common/css/table.css?v=5"/><LINK rel="stylesheet" type="text/css" href="/szseWeb/common/css/table_main.css?v=5"/><LINK rel="stylesheet" type="text/css" href="/szseWeb/common/datepicker/calendar/calendar.css?v=5"/><script language="javascript"  src="/szseWeb/common/script/table.js?v=5"></script><script language="javascript"  src="/szseWeb/common/datepicker/calendar/calendar.js?v=5"></script><script language="javascript"  src="/szseWeb/js-report/report-report_scsj_xml.js?v=5"></script><span id="REPORT_ID"><span id="REPORT_ID_1804"><table  width='100%' cellspacing='1'><tr><td align="left"><table class="cls-search-table-common cls-search-table" width="800" >
+	  <tbody><tr><td width="6" align="left" valign="top" background="/szseWeb/common/images/search05.gif">
+	     <img src="/szseWeb/common/images/search01.gif" height="6" width="6"/></td>
+		 <td rowspan="3" ><table border='0' ><tr><td width="2"></td>
+  		<td width="18"><div class="cls_search_class1"/></td>
+  		<td><span class="cls_search_class2">信息查询</span></td>
+  		<td width="1">&nbsp;</td>
+  		<td width="5"><div class="cls_search_class3"/></td><td align='left'><span style="margin-left:5px;"></span><input value="2018-06-07"  type="text" name="txtDate" id="1804_gid_tab1_con_txtDate"  onkeypress="doReportInputboxClick(event,'1804','tab1')" class='cls-datepicker' onblur="blurJD()" onClick="getcalendar(this,'yyyy-mm-dd',event)" onFocus="this.select();" title="格式:YYYY-MM-DD"/><input  type='text' name='txtIgnore' style='display:none'><span style="margin-left:10px;"></span><input type="button" id="1804_tab1_btn" value="" class="cls_search_button" onclick="submit1804tab1()"/></td></tr></table></td>
+		 <td width="6" align="right" valign="top" background="/szseWeb/common/images/search06.gif"><img src="/szseWeb/common/images/search03.gif" height="6" width="6"/></td></tr><tr><td background="/szseWeb/common/images/search05.gif"></td><td background="/szseWeb/common/images/search06.gif"></td></tr><tr><td width="6" align="left" valign="bottom" background="/szseWeb/common/images/search05.gif"><img src="/szseWeb/common/images/search02.gif" height="6" width="6"/></td><td width="6" align="right" valign="bottom" background="/szseWeb/common/images/search06.gif"><img src="/szseWeb/common/images/search04.gif" height="6" width="6"/></td></tr></tbody></table><table class='cls-title-table-common cls-title-table' bgcolor='#ffffff' width="800" ><tr><td align='left' class='cls-title-td'><div style='text-align:center;display:inline;width:110px;'  class='cls-title-selected' >证券类别统计</div><div style='text-align:center;display:inline;width:120px;'  class='cls-title-deselected' onclick="switchTabItem('1804','tab2')">股票行业统计</div>&nbsp;&nbsp;&nbsp;<span class='cls-subtitle'>2018-06-07</span><span id='MESSAGE_ID'>&nbsp;</span> </td><td>&nbsp;</td><td align='right' width='60px' valign='bottom'><a href="/szseWeb/ShowReport.szse?SHOWTYPE=excel&CATALOGID=1804&txtDate=2018-06-07&ENCODE=1&TABKEY=tab1">下载&nbsp;<img style='VERTICAL-ALIGN: middle; padding-bottom:5px; border='0' src='/szseWeb/common/images/excel.gif'></a></td></tr></table><table   bgcolor='#E0E0E0' id="REPORTID_tab1" class='cls-data-table-common cls-data-table'  border="0"  cellspacing='1'  width="800"  ><tr><th    width='120px'     bgcolor='#cde1fe' >证券类别</th><th    width='80px'     bgcolor='#cde1fe' >数量(只)</th><th    width='120px'     bgcolor='#cde1fe' >成交金额(元)</th><th    width='80px'     bgcolor='#cde1fe' >成交量</th><th    width='100px'     bgcolor='#cde1fe' >总股本</th><th    width='100px'     bgcolor='#cde1fe' >总市值</th><th    width='100px'     bgcolor='#cde1fe' >流通股本</th><th    width='100px'     bgcolor='#cde1fe' >流通市值</th></tr><tr bgcolor='#ffffff' ><td  width='120px'  align='left'  >股票</td><td  width='80px'  align='right'  >2152</td><td  width='120px'  align='right'  >193,573,540,040</td><td  width='80px'  align='right'  >14,801,480,684</td><td  width='100px'  align='right'  >1,922,668,160,394</td><td  width='100px'  align='right'  >22,353,378,787,273</td><td  width='100px'  align='right'  >1,482,812,819,703</td><td  width='100px'  align='right'  >16,192,920,278,007</td></tr><tr bgcolor='#F8F8F8' ><td  width='120px'  align='left'  >&nbsp;&nbsp;主板A股</td><td  width='80px'  align='right'  >465</td><td  width='120px'  align='right'  >45,673,387,950</td><td  width='80px'  align='right'  >4,263,036,621</td><td  width='100px'  align='right'  >759,420,476,034</td><td  width='100px'  align='right'  >7,301,067,368,852</td><td  width='100px'  align='right'  >632,952,994,886</td><td  width='100px'  align='right'  >6,107,347,509,834</td></tr><tr bgcolor='#ffffff' ><td  width='120px'  align='left'  >&nbsp;&nbsp;主板B股</td><td  width='80px'  align='right'  >49</td><td  width='120px'  align='right'  >105,142,619</td><td  width='80px'  align='right'  >16,664,890</td><td  width='100px'  align='right'  >12,874,775,870</td><td  width='100px'  align='right'  >73,209,709,800</td><td  width='100px'  align='right'  >12,744,537,017</td><td  width='100px'  align='right'  >72,250,895,569</td></tr><tr bgcolor='#F8F8F8' ><td  width='120px'  align='left'  >&nbsp;&nbsp;中小板</td><td  width='80px'  align='right'  >911</td><td  width='120px'  align='right'  >83,649,170,709</td><td  width='80px'  align='right'  >6,406,951,990</td><td  width='100px'  align='right'  >797,897,802,167</td><td  width='100px'  align='right'  >9,843,690,518,517</td><td  width='100px'  align='right'  >596,537,600,273</td><td  width='100px'  align='right'  >6,894,298,119,234</td></tr><tr bgcolor='#ffffff' ><td  width='120px'  align='left'  >&nbsp;&nbsp;创业板</td><td  width='80px'  align='right'  >727</td><td  width='120px'  align='right'  >64,145,838,761</td><td  width='80px'  align='right'  >4,114,827,183</td><td  width='100px'  align='right'  >352,475,106,323</td><td  width='100px'  align='right'  >5,135,411,190,104</td><td  width='100px'  align='right'  >240,577,687,527</td><td  width='100px'  align='right'  >3,119,023,753,370</td></tr><tr bgcolor='#F8F8F8' ><td  width='120px'  align='left'  >基金</td><td  width='80px'  align='right'  >533</td><td  width='120px'  align='right'  >6,862,698,870</td><td  width='80px'  align='right'  >2,160,742,799</td><td  width='100px'  align='right'  >116,441,209,979</td><td  width='100px'  align='right'  >139,433,398,290</td><td  width='100px'  align='right'  >116,441,209,979</td><td  width='100px'  align='right'  >139,433,398,290</td></tr><tr bgcolor='#ffffff' ><td  width='120px'  align='left'  >&nbsp;&nbsp;LOF</td><td  width='80px'  align='right'  >240</td><td  width='120px'  align='right'  >132,258,562</td><td  width='80px'  align='right'  >124,316,136</td><td  width='100px'  align='right'  >26,645,915,849</td><td  width='100px'  align='right'  >26,782,911,146</td><td  width='100px'  align='right'  >26,645,915,849</td><td  width='100px'  align='right'  >26,782,911,146</td></tr><tr bgcolor='#F8F8F8' ><td  width='120px'  align='left'  >&nbsp;&nbsp;ETF</td><td  width='80px'  align='right'  >54</td><td  width='120px'  align='right'  >6,105,087,232</td><td  width='80px'  align='right'  >1,144,005,292</td><td  width='100px'  align='right'  >36,982,191,131</td><td  width='100px'  align='right'  >68,532,103,235</td><td  width='100px'  align='right'  >36,982,191,131</td><td  width='100px'  align='right'  >68,532,103,235</td></tr><tr bgcolor='#ffffff' ><td  width='120px'  align='left'  >&nbsp;&nbsp;分级基金</td><td  width='80px'  align='right'  >238</td><td  width='120px'  align='right'  >625,264,057</td><td  width='80px'  align='right'  >892,420,371</td><td  width='100px'  align='right'  >51,998,476,399</td><td  width='100px'  align='right'  >43,391,745,128</td><td  width='100px'  align='right'  >51,998,476,399</td><td  width='100px'  align='right'  >43,391,745,128</td></tr><tr bgcolor='#F8F8F8' ><td  width='120px'  align='left'  >&nbsp;&nbsp;封闭式基金</td><td  width='80px'  align='right'  >1</td><td  width='120px'  align='right'  >89,019</td><td  width='80px'  align='right'  >1,000</td><td  width='100px'  align='right'  >814,626,600</td><td  width='100px'  align='right'  >726,638,781</td><td  width='100px'  align='right'  >814,626,600</td><td  width='100px'  align='right'  >726,638,781</td></tr><tr bgcolor='#ffffff' ><td  width='120px'  align='left'  >债券</td><td  width='80px'  align='right'  >4294</td><td  width='120px'  align='right'  >81,619,771,429</td><td  width='80px'  align='right'  >815,462,039</td><td  width='100px'  align='right'  > </td><td  width='100px'  align='right'  > </td><td  width='100px'  align='right'  > </td><td  width='100px'  align='right'  > </td></tr><tr bgcolor='#F8F8F8' ><td  width='120px'  align='left'  >&nbsp;&nbsp;债券现券</td><td  width='80px'  align='right'  >4034</td><td  width='120px'  align='right'  >4,773,996,529</td><td  width='80px'  align='right'  >46,489,789</td><td  width='100px'  align='right'  >0</td><td  width='100px'  align='right'  >23,754,457,873,705</td><td  width='100px'  align='right'  >1,560,869,536,200</td><td  width='100px'  align='right'  >1,570,301,531,358</td></tr><tr bgcolor='#ffffff' ><td  width='120px'  align='left'  >&nbsp;&nbsp;债券回购</td><td  width='80px'  align='right'  >9</td><td  width='120px'  align='right'  >76,630,225,000</td><td  width='80px'  align='right'  >766,302,250</td><td  width='100px'  align='right'  > </td><td  width='100px'  align='right'  > </td><td  width='100px'  align='right'  > </td><td  width='100px'  align='right'  > </td></tr><tr bgcolor='#F8F8F8' ><td  width='120px'  align='left'  >&nbsp;&nbsp;ABS   </td><td  width='80px'  align='right'  >251</td><td  width='120px'  align='right'  >215,549,900</td><td  width='80px'  align='right'  >2,670,000</td><td  width='100px'  align='right'  >230,419,778,862</td><td  width='100px'  align='right'  >224,186,134,563</td><td  width='100px'  align='right'  >230,419,778,862</td><td  width='100px'  align='right'  >224,186,134,563</td></tr></table></td></tr></table><span style="display:none" id="szseWebReport_pageinfo_1804" catalogid="1804" tabkeys="tab1;" report_action="" url="/szseWeb/FrontController.szse?ACTIONID=7&AJAX=AJAX-TRUE&CATALOGID=1804&TABKEY=tab1&txtDate=2018-06-07"></span></span></span>
+		</td>
+      </tr>
+      <tr>
+        <td>　</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+	</div>
+  </div>
+  <div class="footer">
+	 <div class="f_auto">
+      <div class="small_menu"><a href="/main/aboutus/flsm/index.shtml">法律声明</a><span>|</span><a href="/main/aboutus/lxwm/index.shtml">联系我们</a><br />
+        <a href="/main/aboutus/wzdt/index.shtml">网站地图</a><span>|</span><a href="/main/aboutus/jyrl/">交易日历</a>
+      </div>
+      <div class="f_auto_left">
+      <span>深圳证券交易所 版权所有 &copy;<samp>2013 Shenzhen Stock Exchange. All Rights Reserved</samp></span><br />
+      [<a class="bs" href="http://www.miitbeian.gov.cn">粤ICP备05012689号</a> (建议使用IE6.0以上浏览器，1024x768以上分辨率)]
+      </div>
+      <div class="f_auto_right">
+      <span id='_ideConac' ></span>
+<script src='http://dcs.conac.cn/js/20/310/0000/60074244/CA203100000600742440002.js' type='text/javascript'></script>
+      <a href="http://www.sznet110.gov.cn/netalarm/index.jsp" target="_blank"><img src="/main/template/11/images/wa02.png"  border="0" style="padding-
+
+right:5px"/></a> <a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403201010119" target="_blank"><img src="/main/template/11/images/wa01.png"
+
+border="0"  /></a></span> </div>
+  </div></div>
+<script type="text/javascript" src="/szseWeb/common/script/main_treeMenu.js"></script>
+<script type="text/javascript" src="/szseWeb/common/script/treeMenu.js"></script>
+<script type="text/javascript" for="window" event="onload">
+<!--
+	try{
+		selectMenuItem();
+	}catch(e){}
+	try{
+		init();
+	}catch(e){}
+//-->
+</script>
+
+</div>
+</body>
+</html>
+run:1s
+
+Process finished with exit code 0
