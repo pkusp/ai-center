@@ -1,7 +1,7 @@
 # encoding: utf-8
 """
-@author: shipeng
-@contact: peng_shi@shannonai.com
+@author: pkusp
+@contact: pkusp@pkusp.com
 
 @version: 1.0
 @file: number_tagger.py

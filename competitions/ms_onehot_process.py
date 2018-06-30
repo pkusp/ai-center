@@ -1,10 +1,10 @@
 # encoding: utf-8
 """
-@author: shipeng
-@contact: peng_shi@shannonai.com
+@author: pkusp
+@contact: pkusp@outlook.com
 
 @version: 1.0
-@file: ms_onehot_process.py
+@file: onehot_process.py
 @time: 2018/6/26 下午5:39
 
 这一行开始写关于本文件的说明与解释
@@ -17,7 +17,7 @@ import pandas as pd
 from pandas import DataFrame
 
 
-class MSOneHot(object):
+class OneHot(object):
     """
     input_file_name：输入的文件名.csv 在当前脚本的目录
     output_name：输出文件名.csv 将会以改名字保存csv，在当前目录
@@ -134,5 +134,5 @@ class MSOneHot(object):
 if __name__ == '__main__':
     input_filename = 'UserSegAmlDaily.ss.csv'
     output_name = 'onehot.csv'
-    ms = MSOneHot(input_filename, output_name)
+    ms = OneHot(input_filename, output_name)
     ms.save_csv()

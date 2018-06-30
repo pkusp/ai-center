@@ -1,7 +1,7 @@
 # encoding: utf-8
 """
-@author: shipeng
-@contact: peng_shi@shannonai.com
+@author: pkusp
+@contact: pkusp@outlook.com
 
 @version: 1.0
 @file: w2v_train.py
