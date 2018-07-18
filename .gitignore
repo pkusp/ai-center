@@ -2,3 +2,9 @@
 .idea/
 *.cache
 *.pyc
+*.zip
+*.vec
+*.crdownload
+*.txt
+*.csv
+/data_raw/
