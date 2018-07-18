@@ -7,4 +7,5 @@
 *.crdownload
 *.txt
 *.csv
-/data_raw/
+*.xls
+*.xlsx
