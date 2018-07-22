@@ -3,5 +3,5 @@
 
 > 注意将 *.zip* 加入 *.gitignore*
 
-> 参考 *kaggle* 类似比赛：[Quora pair](.https://www.kaggle.com/c/quora-question-pairs)
+> 参考 *kaggle* 类似比赛：[Quora pair](https://www.kaggle.com/c/quora-question-pairs)
 
