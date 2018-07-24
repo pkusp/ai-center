@@ -9,3 +9,4 @@
 
 这一行开始写关于本文件的说明与解释
 """
+from competitions.setting_manager import config
