@@ -1,6 +1,6 @@
 # encoding: utf-8
 """
-@author: pkudp
+@author: pkusp
 @contact: pkudp@outlook.com
 
 @version: 1.0
