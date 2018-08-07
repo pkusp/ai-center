@@ -17,12 +17,13 @@ from pandas import Series,DataFrame
 #from sklearn.model_selection import train_test_split
 from sklearn import datasets
 # from sklearn import cross_validation
-
+import logging
 import xgboost as xgb
 
 from competitions import config
 from competitions.article_class_2018_DataCastle.article_class_2018.kernel.eda import PreData
 from competitions.article_class_2018_DataCastle.article_class_2018.kernel.eda import save_data
+logger = logging.getLogger(__name__)
 
 
 class BasicModel(object):
@@ -34,7 +35,8 @@ class BasicModel(object):
         self.pre_data()
 
     def pre_data(self):
-        print("__pre_data__")
+        logger.info('data vectorize')
+
         pre_data = PreData()
         self.train_doc,self.test_doc,self.label_doc = pre_data.vectorize()
 
@@ -50,15 +52,7 @@ class XGBModel(BasicModel):
     def __init__(self):
         super(XGBModel,self).__init__()
         self.model_name = "XGBoost"
-        # self.train_doc=None
-        # self.test_doc = None
-        # self.label_doc = None
-        print("_____xgboost running_____")
-        # self.pre_data()
-    #
-    # def pre_data(self):
-    #     pre_data_obj = PreData()
-    #     self.train_doc,self.test_doc,self.label_doc = pre_data_obj.vectorize()
+        logger.info('xgboost launching...')
 
     def train(self):
         param = {
@@ -86,10 +80,6 @@ class XGBModel(BasicModel):
         xgb_model = xgb.train(param, train_final, 100)  # ,watchlist)
         preds = xgb_model.predict(test_final)
         return preds
-    #
-    # def save_csv(self):
-    #     preds = self.train()
-    #     save_data(preds,self.model_name)
 
     def validation(self):
         pass
@@ -98,6 +88,7 @@ class XGBModel(BasicModel):
 class LSTMModel(object):
     def __init__(self):
         self.model_name = "LSTM"
+        logger.info('LSTM launching...')
 
     def pre_data(self):
         pass
@@ -116,28 +107,14 @@ class SVMModel(BasicModel):
     def __init__(self):
         super(SVMModel,self).__init__()
         self.model_name="SVM"
-        # self.train_doc=None
-        # self.test_doc = None
-        # self.label_doc = None
-        # self.pre_data()
-
-    # def pre_data(self):
-    #     print("__pre_data__")
-    #     pre_data = PreData()
-    #     self.train_doc,self.test_doc,self.label_doc = pre_data.vectorize()
+        logger.info('SVM launching...')
 
     def train(self):
-        print("----------train svm------------")
         from sklearn import svm
         lin_clf = svm.LinearSVC()
         lin_clf.fit(self.train_doc, self.label_doc)
         preds = lin_clf.predict(self.test_doc)
         return preds
-
-    # def save_csv(self):
-    #     print("__save_csv__")
-    #     preds = self.train()
-    #     save_data(preds,self.model_name)
 
     def validation(self):
         pass

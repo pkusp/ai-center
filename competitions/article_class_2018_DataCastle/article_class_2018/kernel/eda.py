@@ -134,7 +134,6 @@ def save_data(preds,model_name):
     save_file.close()
 
 
-
 if __name__ == '__main__':
     import time
     t1 = time.time()
