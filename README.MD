@@ -1,4 +1,4 @@
-## AI_Kernels 仓库介绍
+## 仓库介绍
 
 
 > 欢迎进入本仓库的wiki查看更详细说明-> ***[点击进入wiki](https://github.com/pkusp/AI_kernels/wiki/home)***
