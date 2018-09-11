@@ -92,7 +92,29 @@ int main(){
 
 
 
+class Solution{
+    public:
+        ListNode* BinaryTreeToLinkList(TreeNode *root){
+            ListNode* head=NULL;
+            ListNode* tmp = head;
+            InOrder(root);
+            tmp->next=NULL;
+            return head
+        }
 
+        void InOrder(TreeNode* root){
+            if(TreeNode->left) InOrder(TreeNode->left);
+            //
+            if(root.val){
+                ListNode* node = new ListNode(root.val);
+                tmp->next = node;
+                tmp=tmp->next;
+            }
+            if(TreeNode->right) InOrder(TreeNode->right);
+
+        }
+
+}
 
 
 

@@ -124,6 +124,25 @@ class PreData(object):
         label = (train[self.label_column]-1).astype(int)
         return train_term_doc,test_term_doc,label
 
+    def save_tfidf(self):
+        """
+
+        :return: 保存TFIDF文件
+        """
+        import pickle
+        train,test,label = self.vectorize()
+        pickle.dump(train,open(art_doc+'train_doc.pickle','wb'))
+        pickle.dump(test,open(art_doc+'test_doc.pickle','wb'))
+        pickle.dump(label,open(art_doc+'label_doc.pickle','wb'))
+
+    def read_pickle(self):
+        import pickle
+        train_file = os.path.join(art_doc,'train_doc.pickle')
+        test_file = os.path.join(art_doc,'test_doc.pickle')
+        label_file = os.path.join(art_doc,'label.pickle')
+        print(test_file)
+        return pickle.load(open(train_file,'rb')),pickle.load(open(test_file,'rb')),pickle.load(open(label_file,'rb'))
+
 
 def save_data(preds,model_name):
     save_file = open(os.path.join(art_doc, model_name+str(datetime.now().date())+'.csv'), mode='w')
@@ -137,8 +156,10 @@ def save_data(preds,model_name):
 if __name__ == '__main__':
     import time
     t1 = time.time()
-    eda = EDA()
-    eda.eda()
+    # eda = EDA()
+    # eda.eda()
+    pre = PreData()
+    a,b,c=pre.read_pickle()
     t2 = time.time()
     print('run {}s'.format(round(t2-t1,4)))
 

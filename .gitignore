@@ -11,4 +11,4 @@
 *.xlsx
 *.7z
 *.gz
-
+*.pickle
