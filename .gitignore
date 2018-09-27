@@ -12,3 +12,5 @@
 *.7z
 *.gz
 *.pickle
+/data_raw/
+*.json

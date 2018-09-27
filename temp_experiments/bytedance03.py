@@ -1,108 +1,45 @@
-# encoding: utf-8
-"""
-@author: pkusp
-@contact: pkusp@outlook.com
+import sys
+def countWays(p, q, r, last):
 
-@version: 1.0
-@file: bytedance03.py
-@time: 2018/9/9 上午11:13
+    if (p < 0 or q < 0 or r < 0):
+        return 0
 
-这一行开始写关于本文件的说明与解释
-"""
+    if (p == 1 and q == 0 and
+            r == 0 and last == 0):
+        return 1
+
+    if (p == 0 and q == 1 and
+            r == 0 and last == 1):
+        return 1
+
+    if (p == 0 and q == 0 and
+            r == 1 and last == 2):
+        return 1
+
+    if (last == 0):
+        return (countWays(p - 1, q, r, 1) +
+                countWays(p - 1, q, r, 2))
+
+    if (last == 1):
+        return (countWays(p, q - 1, r, 0) +
+                countWays(p, q - 1, r, 2))
+    if (last == 2):
+        return (countWays(p, q, r - 1, 0) +
+                countWays(p, q, r - 1, 1))
+
+def countUtil(p, q, r):
+
+    return (countWays(p, q, r, 0) +
+            countWays(p, q, r, 1) +
+            countWays(p, q, r, 2))
 
 
-class Solution {
-public vector < string > restoreIpAddresses(string & s) {
-// Write your code here
-int n = s.length();
-vector < string > buf;
-vector < string > result;
-visit(s, 1, 0, n, buf, result);
+if __name__ == '__main__':
+    line = sys.stdin.readline()
+    # line = list(map(int, line.split()))
+    line = str(line).split()
+    p,q,r=int(line[0]),int(line[1]),int(line[2])
+    print(p,q,r)
+    print(countUtil(p, q, r))
 
-
-return result;
-}
-private
-void
-visit(string & s, int
-index, int
-begin, int
-n, vector < string > & buf, vector < string > & result)
-{
-if (begin >= n | | index > 4)
-    {
-return;
-}
-
-if (index == 4)
-{
-if (n - begin > 3)
-    {
-return;
-}
-string
-temp = s.substr(begin);
-if (n - begin < 3 | | temp <= "255")
-{
-if ((n - begin) > 1 & & s[begin] == '0')
-    {
-return;
-}
-buf.push_back(temp);
-string
-a;
-for (int i = 0; i < 3; i++)
-{
-a += buf[i] + ".";
-}
-a += buf[3];
-result.push_back(a);
-buf.pop_back();
-}
-
-return;
-}
-
-for (int len = 1; len <= 3; len++)
-{
-    if (len == 1)
-        {
-            buf.push_back(s.substr(begin, len));
-        visit(s, index + 1, begin + len, n, buf, result);
-        buf.pop_back();
-        }
-        else if (len == 2)
-            {
-            if (s[begin] == '0')
-            {
-        continue;
-        }
-        else
-        {
-        string
-        temp = s.substr(begin, 2);
-        buf.push_back(temp);
-        visit(s, index + 1, begin + len, n, buf, result);
-        buf.pop_back();
-    }
-    }
-    else
-    {
-    if (s[begin] == '0')
-    {
-    continue;
-    }
-    else
-    {
-    string
-    temp = s.substr(begin, 3);
-    if (temp <= "255")
-        {
-            buf.push_back(temp);
-        visit(s, index + 1, begin + len, n, buf, result);
-        buf.pop_back();
-        }
-        }
-        }
-        }
-        }
+# This code is contributed by mits
