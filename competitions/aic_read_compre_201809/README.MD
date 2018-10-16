@@ -1,7 +1,7 @@
 ## AI challenger 2018 之 [观点型问题阅读理解](https://challenger.ai/competition/oqmrc2018)
 
 ## 赛题描述
-简介
+### 简介
 机器阅读理解是指让计算机阅读文本，随后让计算机解答与文中信息相关的问题。本次竞赛将重点针对阅读理解中较为复杂的，需要利用整篇文章中多个句子的信息进行综合才能得到正确答案的观点型问题。
 
 
@@ -58,3 +58,4 @@
 Accuracy = 正确回答的question数 / 测试question总数
 
 ## [baseline](https://github.com/AIChallenger/AI_Challenger_2018)
+
