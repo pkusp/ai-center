@@ -1,6 +1,31 @@
 ## *ALL IN AI*
 
 
+top conference :
+
+| name | url | aera |
+---|---|---
+acl|https://www.aclweb.org|nlp
+emnlp| |nlp
+kdd| | ml
+cvpr| | cv
+eccv| | cv
+nips| | dl
+aaai| | ml
+
+top platform:
+
+name | url
+---|---
+kaggle|https://www.kaggle.com
+tianchi|
+datacastle|
+dianshi|
+zhiyuan|
+aichallenger|
+
+
+---
 
 
 > 目录
@@ -55,6 +80,11 @@
 
 
 ---
+
+
+
+
+
 
 > copyright : MIT
 
