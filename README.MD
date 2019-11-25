@@ -1,9 +1,9 @@
 ## *ALL IN AI*
 
 
-top conference :
+**TOP CONFERENCE:**
 
-| name | url | aera |
+| NAME | URL | AERA |
 ---|---|---
 acl|https://www.aclweb.org|nlp
 emnlp| |nlp
@@ -13,9 +13,9 @@ eccv| | cv
 nips| | dl
 aaai| | ml
 
-top platform:
+**TOP PLATFORM:**
 
-name | url
+NAME | URL
 ---|---
 kaggle|https://www.kaggle.com
 tianchi|
@@ -23,6 +23,26 @@ datacastle|
 dianshi|
 zhiyuan|
 aichallenger|
+
+
+**HOT:**
+
+NAME|ABSTRACT
+---|---
+GNN|
+AUTO_ML|
+
+**PAPER:**
+
+aera | abstract
+---|---
+nlp|
+cv|
+ml|
+dl|
+rl|
+ads|
+
 
 
 ---
