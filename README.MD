@@ -43,6 +43,18 @@ dl|
 rl|
 ads|
 
+---
+
+recent work:
+
+- impression prediction
+    - Attention
+    - deepCTR&deepFM
+
+- cluster
+    - HIN(GNN)
+
+- reignforcement learning
 
 
 ---
