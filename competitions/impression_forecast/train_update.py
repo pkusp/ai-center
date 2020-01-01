@@ -23,6 +23,34 @@ data_file = "./doc/21380.csv"
 train_full = pd.read_csv(data_file)
 
 #####
+data = train_full
+
+
+def label(column_name):
+    label = np.zeros(len(data))
+    label[0:len(data) - 1] = data[column_name][1:]
+    print(label)
+    data['{}Label'.format(column_name)] = label
+    return
+
+
+def feature_days_ago(days, column_name):
+    feature_name = column_name + str(days) + 'Days'
+    feature_lst = np.zeros(len(data))
+    feature_lst[days: len(data)] = data[column_name][0: len(data) - days]
+    print(label)
+    data[feature_name] = feature_lst
+
+
+for ele in ["Impressions", "Clicks", "Conversions", "RevenueUSD"]:
+    label(ele)
+    feature_days_ago(1, ele)
+    feature_days_ago(7, ele)
+    feature_days_ago(30, ele)
+    # accumulate_monthly(ele)
+
+data.to_csv('./doc/21380_cook.csv')
+
 
 #####
 
@@ -53,14 +81,14 @@ def creat_dataset(dataset, look_back):
 
 
 # 以14为特征维度，得到数据集，即前14天预测后一天
-dataX, dataY = creat_dataset(datas, 35)
+dataX, dataY = creat_dataset(datas, 14)
 
 train_size = int(len(dataX) * 0.7)
 
 x_train = dataX[:train_size]  # 训练数据
 y_train = dataY[:train_size]  # 训练数据目标值
 
-x_train = x_train.reshape(-1, 1, 35)  # 将训练数据调整成pytorch中lstm的输入维度
+x_train = x_train.reshape(-1, 1, 14)  # 将训练数据调整成pytorch中lstm的输入维度
 y_train = y_train.reshape(-1, 1, 1)  # 将目标值调整成pytorch中lstm的输出维度
 
 # 将ndarray数据转换为张量，因为pytorch用的数据类型是张量
@@ -75,7 +103,7 @@ y_train = torch.from_numpy(y_train)
 class RNN(nn.Module):
     def __init__(self):
         super(RNN, self).__init__()  # 面向对象中的继承
-        self.lstm = nn.LSTM(35, 6, 2)  # 输入数据14个特征维度，6个隐藏层维度，2个LSTM串联，第二个LSTM接收第一个的计算结果
+        self.lstm = nn.LSTM(14, 6, 2)  # 输入数据14个特征维度，6个隐藏层维度，2个LSTM串联，第二个LSTM接收第一个的计算结果
         self.out = nn.Linear(6, 1)  # 线性拟合，接收数据的维度为6，输出数据的维度为1
 
     def forward(self, x):
@@ -95,7 +123,7 @@ loss_func = nn.MSELoss()
 
 # 三、训练模型
 
-for i in range(1000):
+for i in range(100):
     var_x = Variable(x_train).type(torch.FloatTensor)
     var_y = Variable(y_train).type(torch.FloatTensor)
     out = rnn(var_x)
@@ -114,7 +142,7 @@ y_test = dataY[train_size:]
 
 
 
-dataX1 = x_test.reshape(-1, 1, 35)
+dataX1 = x_test.reshape(-1, 1, 14)
 dataX2 = torch.from_numpy(dataX1)
 var_dataX = Variable(dataX2).type(torch.FloatTensor)
 
@@ -132,4 +160,3 @@ plt.legend(loc='best')
 
 plt.ioff()
 plt.show()
-

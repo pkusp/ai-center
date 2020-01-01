@@ -39,3 +39,28 @@ def get_train():
     print(train.head())
     return train
 
+
+
+data = train_full
+def label(column_name):
+    label = np.zeros(len(data))
+    label[0:len(data)-1] = data[column_name][1:]
+    print(label)
+    data['{}Label'.format(column_name)] = label
+    return
+
+def feature_days_ago(days, column_name):
+    feature_name = column_name + str(days) + 'Days'
+    feature_lst = np.zeros(len(data))
+    feature_lst[days : len(data)] = data[column_name][0 : len(data) - days]
+    print(label)
+    data[feature_name] = feature_lst
+
+for ele in ["Impressions", "Clicks", "Conversions", "RevenueUSD"]:
+    label(ele)
+    feature_days_ago(1, ele)
+    feature_days_ago(7, ele)
+    feature_days_ago(30, ele)
+    # accumulate_monthly(ele)
+
+data.to_csv(r'D:\Feature\21380_cook.csv')
