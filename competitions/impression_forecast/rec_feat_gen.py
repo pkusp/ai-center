@@ -42,6 +42,8 @@ def raw_data_gen():
     }
 
     test_train_df = pd.DataFrame(data=test_train_data)
+    print(test_train_df)
+    print("test",test_train_df.iloc[1, 0])
     return test_train_df
 
 
@@ -80,10 +82,10 @@ class MovieRankDataset(Dataset):
 
         cust_inputs = {
             'cust_id': torch.LongTensor(cust_id).view(1, -1),
-            'cust_type': torch.LongTensor(cust_type),
-            'cust_seq1': torch.LongTensor(cust_seq1),
-            'cust_seq2': torch.LongTensor(cust_seq2),
-            'cust_seq3': torch.LongTensor(cust_seq3)
+            'cust_type': torch.LongTensor(cust_type).view(1, -1),
+            'cust_seq1': torch.LongTensor(cust_seq1).view(1, -1),
+            'cust_seq2': torch.LongTensor(cust_seq2).view(1, -1),
+            'cust_seq3': torch.LongTensor(cust_seq3).view(1, -1)
         }
 
         sample = {
