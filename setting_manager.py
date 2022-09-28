@@ -6,7 +6,6 @@
 @version: 1.0
 @file: setting_manager.py
 @time: 2018/6/13 下午7:50
-
 这一行开始写关于本文件的说明与解释
 """
 import os
